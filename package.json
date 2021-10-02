@@ -1,0 +1,22 @@
+{
+  "name": "my_project_name",
+  "version": "1.0.0",
+  "description": "For Learning Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsansoftengineer/Node.git"
+  },
+  "author": "Muhammad Ahsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsansoftengineer/Node/issues"
+  },
+  "homepage": "https://github.com/ahsansoftengineer/Node#readme",
+  "dependencies": {
+    "validator": "^13.6.0"
+  }
+}
