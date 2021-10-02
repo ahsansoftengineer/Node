@@ -1,9 +1,15 @@
 # Learn Node
-## How to install Node?
+## What is Node.js?
+> 1. Node.js is free and open source server environment
+### Second Level Points
+> 1. Sends the task to the computer's file system.
+
+#### Extra Information
+
+## Link
 > 1. Go to the following URL and download the Node
 > 2. Link .[NODE] (https://nodejs.org/en/download/)
 > 3. Follow the on screen instruction to install
 
-## After Installation use the following command in the terminal
-> *node -v*
-> *npm -v*
+## Commands
+> *command **-v***
