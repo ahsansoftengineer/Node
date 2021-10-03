@@ -25,3 +25,43 @@
 > * Following Command will create node module folder and install all dependencies for validator in it.
 > * Create package-lock.json where the dependencies exsist on the internet
 * *npm i validator*
+* *npm i chalk*
+## How to use Node validator?
+* node-validator is a simple, extensible object property validator for node.js. NEW Check out my second generation validator better-validator. It gives more options around usage and formatting as well as typescript support. It includes direct support for express.
+* There are two ways of Importing Validator
+> * Before ES6 *const validator = require('validator')* 
+> * After ES6 *import validator from 'validator'*
+* To Validate Something use the following syntax
+```javascript
+const validator = require('validator')
+import validator from 'validator'
+let email = 'abc@gmail.com'
+let url = 'http://google.com'
+console.log('email : ' + validator.isEmail(email));
+console.log('url : ' + validator.isURL(url));
+```
+## How to use Node chalk?
+* chalk is a library that provides a simple and easy to use interface for applying ANSI colors and styles to your command-line output. 
+* You can chain the FrontColor and BackGround Color easily the order doesn't matter
+```javascript
+const chalk =  require('chalk')
+log = console.log
+// Combine styled and normal strings
+log(chalk.blue('Hello') + ' World' + chalk.red('!'));
+
+// Compose multiple styles using the chainable API
+log(chalk.rgb(123, 45, 67).bgBlackBright.bold.italic('Hello world!'));
+
+// Pass in multiple arguments
+log(chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz', 'baz'));
+
+// Nest styles
+log(chalk.red('Hello', chalk.underline.bgBlue('world') + '!'));
+
+// Nest styles of the same type even (color, underline, background)
+log(chalk.green(
+	'I am a green line ' +
+	chalk.blue.underline.bold('with a blue substring') +
+	' that becomes green again!'
+));
+```
