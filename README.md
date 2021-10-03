@@ -1,24 +1,46 @@
-## How to Use Node to execute a javascript file
-> * *node fileName.js*
-## Files and folder Utilized
-> * *app.js*
-> * *utils.js*
-> * *note.txt*
-## How to use global Node Modules for Create and Update File?
-> 1. To Use Global Modules we first need to import it in our js file
+## How to Use node flags in application?
+* *node app.js -c -u -d x*
+* Utilizing Flags in Application
 ```javascript
-const fs = require('fs');
-fs.writeFileSync('note.txt', 'Initial Content in the file\n');
-console.log('File has created');
-fs.appendFileSync('note.txt', 'Appended Content in the File\n');
-console.log('File has updated');
+l = console.log;
+l('Application Started');
+command = process.argv;
+l(command)
+command.forEach((cmd) => {
+  if (
+    cmd === command[0] || cmd === 'D:\\2 Node\\Node\\app.js') l('skipped options');
+  else {
+    switch (cmd) {
+      case '-a':
+      case 'add':
+      case '-c':
+      case 'create':
+        l('ADD / CREATE');
+        break;
+      case '-u':
+      case 'update':
+      case '-m':
+      case 'modified':
+        l('UPDATE / MODIFIED');
+        break;
+      case '-d':
+      case 'del':
+      case 'delete':
+        l('DEL / DELETE');
+        break;
+      case '-g':
+      case 'get':
+        l('GET');
+        break;
+      case '-ga':
+      case 'getAll':
+        l('GET ALL');
+        break;
+      default:
+        l('Option not defined');
+        break;
+    }
+  }
+});
+
 ```
-#### Extra Information 
-
-## Link
-> 1. Go to the following URL and download the Node
-> 2. Link .[NODE] (https://nodejs.org/en/download/)
-> 3. Follow the on screen instruction to install
-
-## Commands
-> *command **-v***
