@@ -44,3 +44,10 @@ command.forEach((cmd) => {
 });
 
 ```
+
+## What is yargs?
+* Yargs helps you build interactive command line tools by parsing arguments and generating an elegant user interface. Yargs gives you: commands and (grouped) options (like module run -n --force), ... bash-completion shortcuts for commands and options, and much more.
+* Yargs module is used for creating your own command-line commands in node. js and helps in generating an elegant user interface. This module makes command-line arguments flexible and easy to use.
+## How to install Yargs?
+* <span style="color:blue">*npm i yargs* </span>
+* 
