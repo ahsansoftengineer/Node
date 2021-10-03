@@ -2,12 +2,7 @@ const yargs = require('yargs')
 l = console.log;
 l('Application Started');
 command = process.argv;
-l('Result of Node')
-l(command)
-l('Result of Yargs')
-l(yargs.argv)
-l('Title Printed by using Yargs')
-l(yargs.argv.title)
+
 
 command.forEach((cmd) => {
   if (
