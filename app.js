@@ -1,1 +1,2 @@
-console.log('Work Here');
+a = console.log
+a('working')
