@@ -1,13 +1,10 @@
-## How to Create Array of Command?
-> 1. Go to the following URL and download the Node
-```javascript
 const yargs = require('yargs');
 l = console.log;
 l(yargs.argv);
-```
-> #### There are several Ways of defining Command in Yargs
-### 1. Array of Command
-```javascript
+l('Working Here');
+yargs.version('1.0.0');
+// There are several Ways of defining Command in Yargs
+// 1. Array of Command
 yargs
   .command([
     {
@@ -40,9 +37,7 @@ yargs
     },
   ])
   .parse();
-```
-### 2. Command Chaining
-```javascript
+// 2. Command Chaining
 yargs
   .command({
     command: 'a',
@@ -73,9 +68,9 @@ yargs
     },
   })
   .parse();
-```
-### 3. Parsing All Command
-```javascript
+
+// 3. Parsing All Command
+
 yargs
   .command({
     command: 'A',
@@ -94,4 +89,3 @@ yargs
     },
   })
   .parse();
-```
