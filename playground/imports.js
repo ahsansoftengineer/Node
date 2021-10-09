@@ -1,6 +1,7 @@
-const yargs = require('yargs')
+const yargs = require('yargs') // NPM Module
+const fs = require('fs') // Node Module
 const chalk = require('chalk');
-const notes = require('./notes.js')
+const notes = require('./notes.js') // Local Module
 const l = console.log
 const fs = require('fs');
 error = chalk.white.bgRed.bold('ERROR ');
