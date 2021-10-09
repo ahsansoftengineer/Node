@@ -38,4 +38,4 @@ task.tasks.tasks
 task.tasks.tasks[0]
 {text: 'Grocery shopping', completed: true}
 ```
-![Chrome_Dev_Tools](../images/Chrome DevTool.PNG?raw=true)
+![Chrome_Dev_Tools](https://github.com/ahsansoftengineer/Node/blob/12_Debugging_Node_Application/images/Chrome%20DevTool.PNG)
