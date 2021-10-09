@@ -1,9 +1,28 @@
 # Learn Node
-## How to install Node?
-> 1. Go to the following URL and download the Node
-> 2. Link .[NODE] (https://nodejs.org/en/download/)
-> 3. Follow the on screen instruction to install
-
-## After Installation use the following command in the terminal
-> *node -v*
-> *npm -v*
+## How to Save Javascript Object into JSON formate in File?
+#### Importing File System Module from Global Node Module
+```javascript
+const fs = require('fs')
+```
+#### Converting Javascript Object into JSON
+```javascript
+const book = {
+  title: 'Copy Name',
+  author: 'Author'
+}
+const jsonData = JSON.stringify(book);
+// Storing into File
+fs.writeFileSync('my-json-file.json',jsonData);
+```
+#### Converting JSON into Javascript Object
+```javascript
+// Reading JSON Data from File
+const dataBuffer = fs.readFileSync('test-json.json');
+const jsonData = dataBuffer.toString();
+const javaScriptObject = JSON.parse(jsonData);
+javaScriptObject.name = 'Asim';
+javaScriptObject.age = 29;
+const newJsonData = JSON.stringify(javaScriptObject);
+fs.writeFileSync('test-b-json.json',newJsonData);
+l(newJsonData)
+```
