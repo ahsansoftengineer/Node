@@ -1,4 +1,19 @@
 ## How to Create Array of Command?
+
+## Important Points Regarding Yargs to Work
+#### To Know Yargs to Work in your application
+> * Log the Yargs in the Console
+```javascript
+  console.log(yargs.argv)
+```
+> * Parse the Yargs at the last of your application
+```javascript
+  yargs.parse()
+```
+> * Otherwise application will not work as aspected
+
+
+
 > 1. Go to the following URL and download the Node
 ```javascript
 const yargs = require('yargs');
@@ -13,6 +28,7 @@ yargs
     {
       command: 'add',
       describe: 'Adding command',
+
       handler: (argv) => {
         l('Adding notes');
       },
@@ -39,7 +55,7 @@ yargs
       },
     },
   ])
-  .parse();
+yargs.parse();
 ```
 ### 2. Command Chaining
 ```javascript
@@ -72,7 +88,7 @@ yargs
       l('G Notes');
     },
   })
-  .parse();
+yargs.parse();
 ```
 ### 3. Parsing All Command
 ```javascript
@@ -84,7 +100,6 @@ yargs
       l('A Capital Notes');
     },
   })
-  .parse();
 yargs
   .command({
     command: 'U',
@@ -93,5 +108,60 @@ yargs
       l('U Capital Notes');
     },
   })
-  .parse();
+  yargs.parse();
+```
+### 4. Adding Parameters to Yargs
+```javascript
+yargs
+  .command([
+    {
+      command: 'add',
+      describe: 'Adding command',
+      builder: {
+        title: {
+          describe: 'Note Title',
+          demandOption: true,
+          type:'string'
+        },
+        message: {
+          describe: 'Note Message',
+          demandOption: true,
+          type: 'string'
+        }
+      },
+      handler: (argv) => {
+        // l(title + message);
+        l('ADD Command')
+        l(' Title :' + argv.title)
+        l(' Message :' + argv.message)
+      },
+    },
+    {
+      command: 'update',
+      describe: 'Update command',
+      handler: (argv) => {
+        l('Update notes');
+      },
+    },
+    {
+      command: 'delete',
+      describe: 'Deleting Node',
+      handler: (argv) => {
+        l('Delete Command Working');
+      },
+    },
+    {
+      command: 'get',
+      describe: 'Get Node',
+      handler: (argv) => {
+        l('Get Command Working');
+      },
+    },
+  ])
+
+// Required Code to Yargs work Correctly
+// 1. Parsing
+yargs.parse();
+// 2. Print is Alternative of Parsing
+l(yargs.argv)
 ```

@@ -1,4 +1,5 @@
 const yargs = require('yargs');
+// import yargs from 'yargs'
 l = console.log;
 l(yargs.argv);
 l('Working Here');
@@ -10,8 +11,23 @@ yargs
     {
       command: 'add',
       describe: 'Adding command',
+      builder: {
+        title: {
+          describe: 'Note Title',
+          demandOption: true,
+          type:'string'
+        },
+        message: {
+          describe: 'Note Message',
+          demandOption: true,
+          type: 'string'
+        }
+      },
       handler: (argv) => {
-        l('Adding notes');
+        // l(title + message);
+        l('ADD Command')
+        l(' Title :' + argv.title)
+        l(' Message :' + argv.message)
       },
     },
     {
@@ -36,56 +52,8 @@ yargs
       },
     },
   ])
-  .parse();
-// 2. Command Chaining
-yargs
-  .command({
-    command: 'a',
-    describe: 'Adding command',
-    handler: (argv) => {
-      l('A notes');
-    },
-  })
-  .command({
-    command: 'u',
-    describe: 'Update command',
-    handler: (argv) => {
-      l('U notes');
-    },
-  })
-  .command({
-    command: 'd',
-    describe: 'Deleting Node',
-    handler: (argv) => {
-      l('D Notes');
-    },
-  })
-  .command({
-    command: 'g',
-    describe: 'Get Node',
-    handler: (argv) => {
-      l('G Notes');
-    },
-  })
-  .parse();
 
-// 3. Parsing All Command
-
-yargs
-  .command({
-    command: 'A',
-    describe: 'Add Node with all Parsing',
-    handler: (argv) => {
-      l('A Capital Notes');
-    },
-  })
-  .parse();
-yargs
-  .command({
-    command: 'U',
-    describe: 'Update Node with all Parsing',
-    handler: (argv) => {
-      l('U Capital Notes');
-    },
-  })
-  .parse();
+  // This is Always Needs to Call If you want Yargs to Pint on the Console
+  yargs.parse();
+  // This is the Alternative of Parsing
+  l(yargs.argv)
