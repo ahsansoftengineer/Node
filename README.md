@@ -38,8 +38,24 @@ const event = {
 ```javascript
 const event = {
   name: 'Brithday Party',
+  guests: ['Ahsan', 'Asim', 'Mobin', 'Yousuf', 'Ibrahim'],
   printGuestList(){
     console.log('Guest List for ' + this.name)
+    // This doesn't work here
+    // To Fix this issue we use external parameter
+    that = this
+    this.guests.forEach(function (guest){
+      console.log(guest + ' this.name ' + this.name + ' that.name ' + that.name );
+    })
+    console.log('============= Comparasion ===============');
+    // 'this' keyword problem could be solved using Arrow Function
+    this.guests.forEach((guest) => {
+      console.log(guest + ' this.name ' + this.name + ' that.name doesn\'t required');
+    })
+    console.log('Invited Guests');
   }
 }
 ```
+#### Sometime Arrow Function is Recommended Sometime Not
+##### Arrow Function *directly in the Object* doesn't support 'this' keyword
+##### Arrow Function in *forEach* does support 'this' keyword

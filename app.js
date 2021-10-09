@@ -27,8 +27,21 @@ l = console.log;
 // 5. ES6 Function has access to 'this' keyword
 const event = {
   name: 'Brithday Party',
+  guests: ['Ahsan', 'Asim', 'Mobin', 'Yousuf', 'Ibrahim'],
   printGuestList(){
     console.log('Guest List for ' + this.name)
+    // This doesn't work here
+    // To Fix this issue we use external parameter
+    that = this
+    this.guests.forEach(function (guest){
+      console.log(guest + ' this.name ' + this.name + ' that.name ' + that.name );
+    })
+    console.log('============= Comparasion ===============');
+    // 'this' keyword problem could be solved using Arrow Function
+    this.guests.forEach((guest) => {
+      console.log(guest + ' this.name ' + this.name + ' that.name doesn\'t required');
+    })
+    console.log('Invited Guests');
   }
 }
 event.printGuestList()
