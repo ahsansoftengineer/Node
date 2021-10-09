@@ -11,9 +11,6 @@
   yargs.parse()
 ```
 > * Otherwise application will not work as aspected
-
-
-
 > 1. Go to the following URL and download the Node
 ```javascript
 const yargs = require('yargs');
