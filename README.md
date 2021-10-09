@@ -16,13 +16,19 @@ fs.writeFileSync('my-json-file.json',jsonData);
 ```
 #### Converting JSON into Javascript Object
 ```javascript
-// Reading JSON Data from File
+// 1. Reading JSON Data from File
 const dataBuffer = fs.readFileSync('test-json.json');
+// 2. Converting Buffer into JSON Data
 const jsonData = dataBuffer.toString();
+// 3. Convert JSON into JavaScript Object
 const javaScriptObject = JSON.parse(jsonData);
+// 4. Updating Data
 javaScriptObject.name = 'Asim';
 javaScriptObject.age = 29;
+// 5. Convert Javascript Object into JSON
 const newJsonData = JSON.stringify(javaScriptObject);
+// 6. Writing JSON Data into File
 fs.writeFileSync('test-b-json.json',newJsonData);
-l(newJsonData)
+// 7. Logging Updated data into Console
+console.log(newJsonData)
 ```
