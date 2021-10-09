@@ -1,0 +1,9 @@
+const yargs = require('yargs')
+const chalk = require('chalk');
+const notes = require('./notes.js')
+const l = console.log
+const fs = require('fs');
+error = chalk.white.bgRed.bold('ERROR ');
+errMsg = chalk.red.italic;
+success = chalk.white.bgGreen.bold('SUCCESS ');
+sucMsg = chalk.green.italic;
