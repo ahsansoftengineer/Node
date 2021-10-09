@@ -18,3 +18,7 @@ l('End')
 > * End
 > * 0 second pause
 > * 2 second pause
+
+#### What are Call Stack, Callback Queue, and Event Loop?
+> Image is Attach to Understand the example
+![Asynchronous Node.js](./Asynchronous.png)
