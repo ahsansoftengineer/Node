@@ -20,7 +20,7 @@ postman_request({url: wheather.new_york_weather}, (error, response, body) => {
   console.log('ERROR :', error); 
   console.log('STATUS CODE:', response && response.statusCode); 
   // postman is converting JSON into javascript object
-  // const data  = JSON.parse(body)
-  // console.log('BODY:', data.current);
-  console.log(body);
+  const data  = JSON.parse(body)
+  console.log('BODY:', data.current);
+  // console.log(body);
 }) 

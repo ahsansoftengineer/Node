@@ -40,7 +40,6 @@ request({url: wheather.new_york_weather}, (error, response, body) => {
   console.warn('REQUEST');
   console.log('ERROR :', error); 
   console.log('STATUS CODE :', response && response.statusCode); 
-  // Request is not converting JSON into javascript object
   const data  = JSON.parse(body)
   console.log('BODY:', data.current);
 }) 
