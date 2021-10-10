@@ -1,10 +1,12 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "description": "> 1. Go to the following URL and download the Node\r > 2. Link .[NODE] (https://nodejs.org/en/download/)\r > 3. Follow the on screen instruction to install",
+  "description": "",
   "main": "app.js",
   "dependencies": {
     "chalk": "^4.1.2",
+    "postman-request": "^2.88.1-postman.30",
+    "request": "^2.88.2",
     "validator": "^13.6.0",
     "yargs": "^17.2.1"
   },
