@@ -40,7 +40,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-playground/access_key.js
+hidden/
 
 # TypeScript v1 declaration files
 typings/
